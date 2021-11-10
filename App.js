@@ -14,7 +14,7 @@ import Route from '@navigations/route';
 export default function App() {
   return (
     <>
-      <StatusBar barStyle="light-content" hidden />
+      <StatusBar />
       <Route />
     </>
   );
