@@ -5,8 +5,8 @@ BookingApp is a react native app for discover Resorts, Hotels, Cottages.
 ## 📷 Screenshots
 
 <div style="display:flex;" >
-  <img src="./src/assets/screenshots/discover_iphone12black_portrait.png"  >
-  <img src="./src/assets/screenshots/reservation-details_iphone12black_portrait.png"  >
+  <img src="./src/assets/screenshots/discover_iphone12black_portrait.png"  width="49%">
+  <img src="./src/assets/screenshots/reservation-details_iphone12black_portrait.png"  width="49%">
 </div>
 
 ## 📲 Try it!
