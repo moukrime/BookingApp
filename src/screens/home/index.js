@@ -7,11 +7,12 @@ import {
   Image,
   ScrollView,
   Dimensions,
+  TouchableOpacity,
 } from 'react-native';
 import {Button, SearchBar, Rating} from 'react-native-elements';
 import {data} from '@core/mocks';
 
-export default function Home() {
+export default function Home({navigation}) {
   const [search, setSearch] = useState();
 
   return (
@@ -53,7 +54,15 @@ export default function Home() {
           />
           <View style={styles.items__container}>
             {data.map((item, index) => (
-              <View style={{marginBottom: 20}} key={index}>
+              <TouchableOpacity
+                style={{marginBottom: 20}}
+                activeOpacity={0.8}
+                key={index}
+                onPress={() => {
+                  navigation.navigate('res-details', {
+                    item,
+                  });
+                }}>
                 <Image
                   source={item.image}
                   style={{
@@ -64,7 +73,7 @@ export default function Home() {
                 />
                 <Text style={styles.items__title}>{item.title}</Text>
                 <Text style={styles.items__count}>{item.count}</Text>
-              </View>
+              </TouchableOpacity>
             ))}
           </View>
 
@@ -111,7 +120,7 @@ export default function Home() {
                   Arabian Resort
                 </Text>
                 <Text style={{fontSize: 14, color: '#a0a1a5', marginTop: 4}}>
-                  Al Thumamah, Riyadh
+                  Marrakech, Morocco
                 </Text>
                 <Rating
                   readonly

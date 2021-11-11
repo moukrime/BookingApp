@@ -1,18 +1,17 @@
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import deepLinking from './deepLinking';
-import Home from '@screens/home';
+import {HomeStack} from './stack-navigator';
 
 const Stack = createStackNavigator();
 
 const Route = ({navigation}) => {
   return (
-    <NavigationContainer linking={deepLinking}>
-      <Stack.Navigator initialRouteName="Home">
+    <NavigationContainer>
+      <Stack.Navigator>
         <Stack.Screen
-          name="Home"
-          component={Home}
+          name="home"
+          component={HomeStack}
           options={{
             headerShown: false,
           }}
